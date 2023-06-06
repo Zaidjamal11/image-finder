@@ -12,15 +12,16 @@ const Component = styled(Box)`
 
  
 
-const BreadCrumb = () => {
+const BreadCrumb = ( { setText, setCount}) => {
     return (
         <Component>
            <InputBase 
            placeholder='Search Images'
+           onChange={(e) =>setText(e.target.value)}
            />
            <InputBase 
              placeholder='Number of Images' 
-             
+             onChange={(e) =>setCount(e.target.value)}
              type='number'/>
         </Component>
     )
